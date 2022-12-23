@@ -4,17 +4,23 @@ import tkinter.filedialog
 class R:
     def __init__(self):
         super().__init__()
-        self.root = tk.Tk()
-        self.root.title("PLANNING--GARWAY-ING")
-        self.root.geometry("320x400")
-        self.root.resizable(1, 1)
 
+        """ root window defination """
+        self.root = tk.Tk() #init
+        self.root.title("PLANNING--GARWAY-ING") #the title
+        self.root.geometry("320x400") #the size of the window
+        self.root.resizable(0, 0) #unable to change the size of the window
+        self.root.attributes("-topmost", "true") #top-window
+
+        """ Listbox defination """
         self.lb = tk.Listbox(self.root, exportselection=0)
         self.lb.bind("<<ListboxSelect>>", self.bfollow)
         self.lt = tk.Listbox(self.root, exportselection=0)
         self.lt.bind("<<ListboxSelect>>", self.tfollow)
         self.test("./每日任务.txt")
 
+        
+        """ Scrollbar defination """
         self.sbY = tk.Scrollbar(self.root, orient=tk.VERTICAL)
         self.sbY.config(command=self.yview)
         self.lb.config(yscrollcommand=self.bscry)
@@ -25,6 +31,7 @@ class R:
         self.lb.config(xscrollcommand=self.bscrx)
         self.lt.config(xscrollcommand=self.tscrx)
 
+        """ Button defination """
         self.bAdd = tk.Button(self.root, text="Add-Plan", command=self.Add)
 
         self.bDel = tk.Button(self.root, text="Fin-Plan", command=self.Del)
@@ -35,10 +42,12 @@ class R:
 
         self.bread = tk.Button(self.root, text="Read", command=self.read)
 
+        """ Var defination """
         self.filename = tk.StringVar()
         self.filename.set("")
         self.filelab = tk.Label(self.root, textvariable=self.filename)
 
+        """ section placing """
         self.lb.place(x=3, y=5)
         self.lt.place(x=151, y=5)
         self.sbY.place(x=300, y=5, height=180)
@@ -52,6 +61,7 @@ class R:
 
         self.status = 1
 
+    """ the notes of the function in README.md """
     def choose(self):
         if self.status == 1:
             path = tkinter.filedialog.askopenfilename()

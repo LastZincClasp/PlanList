@@ -1,6 +1,8 @@
 # Just Read the Source Code
-and use it.
-it is easy to understand
+  
+  and use it.
+  
+  it is easy to understand
   
   AVD2.py is the newest edition.
 
@@ -29,13 +31,13 @@ in
 </br></br>
 
 # Thanks & Sorries
-you guys see that some names of the functions is capitalized, sorry about that, idont want to change it.
-Thanks to StackOverFlow's mina.[ website here! ](https://stackoverflow.com/questions/4066974/scrolling-multiple-tkinter-listboxes-together)
-Thanks to MarkGarway and Dear Miss.Strawberry.They support me.
++ you guys see that some names of the functions is capitalized, sorry about that, idont want to change it.
++ Thanks to StackOverFlow's mina.[ website here! ](https://stackoverflow.com/questions/4066974/scrolling-multiple-tkinter-listboxes-together)
++ Thanks to MarkGarway and Dear Miss.Strawberry.They support me.
 
 </br></br>
 
 # LICENSE
-[GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
++ [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 
